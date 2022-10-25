@@ -1,5 +1,4 @@
 
-
 import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +18,7 @@ export default function UserListedMovies() {
 
   onAuthStateChanged(firebaseAuth, (currentUser) => {
     if (currentUser) setEmail(currentUser.email);
-    else navigate("/");
+    else navigate("/login");
   });
 
   useEffect(() => {

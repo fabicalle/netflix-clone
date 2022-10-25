@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchMovies, getGenres } from "../store";
 import SelectGenre from "../components/SelectGenre";
 import Slider from "../components/Slider";
-function TVShows() {
+export default function TVShows() {
   const [isScrolled, setIsScrolled] = useState(false);
   const movies = useSelector((state) => state.netflix.movies);
   const genres = useSelector((state) => state.netflix.genres);
@@ -33,7 +33,7 @@ function TVShows() {
 
   onAuthStateChanged(firebaseAuth, (currentUser) => {
     if (currentUser) setUser(currentUser.uid);
-    else navigate("/");
+    else navigate("/login");
   });
 
   window.onscroll = () => {
@@ -70,4 +70,4 @@ const Container = styled.div`
     }
   }
 `;
-export default TVShows;
+
