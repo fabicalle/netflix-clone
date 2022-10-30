@@ -8,7 +8,7 @@ import {
   import BackgroundImage from "../components/BackgroundImage";
   import Header from "../components/Header";
   import { firebaseAuth } from "../utils/firebase-config";
-  function Signup() {
+  export default function Signup() {
     const [showPassword, setShowPassword] = useState(false);
     const [formValues, setFormValues] = useState({
       email: "",
@@ -140,4 +140,3 @@ import {
     }
   `;
   
-  export default Signup;
